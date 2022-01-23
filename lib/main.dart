@@ -66,20 +66,43 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      body: Center(
-        child: Card(
-          child: InkWell(
-            splashColor: Colors.blue.withAlpha(30),
-            onTap: () {
-              debugPrint('Card tapped.');
-            },
-            child: const SizedBox(
-              width: 300,
-              height: 100,
-              child: Text('A card that can be tapped'),
+      body: Column(
+        children: [
+          ColoredBox(
+            color: Colors.green,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                OutlinedButton(
+                  onPressed: null,
+                  child: Text('-'),
+                ),
+                Text("🍺"),
+                OutlinedButton(
+                  onPressed: null,
+                  child: Text('+'),
+                ),
+              ],
+            ),
+        ),
+          ColoredBox(
+            color: Colors.red,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: const [
+                OutlinedButton(
+                  onPressed: null,
+                  child: Text('-'),
+                ),
+                Text("🐔"),
+                OutlinedButton(
+                  onPressed: null,
+                  child: Text('+'),
+                ),
+              ],
             ),
           ),
-        ),
+        ]
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
